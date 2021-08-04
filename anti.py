@@ -13,5 +13,5 @@ tbgs.post(url + "login.php?action=in", data=form)
 form = {"delete": "Delete"}
 for i in range(568733, 569356):
     cnt += 1
-    tbgs.post(url + "delete.php?pid=" + str(i), data=form)
+    tbgs.post(url + "delete.php?id=" + str(i), data=form)
     print("Post {} deleted.".format(i))
