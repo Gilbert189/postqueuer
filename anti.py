@@ -10,9 +10,8 @@ form["req_username"] = os.getenv("TBGS_USERNAME")
 form["req_password"] = os.getenv("TBGS_PASSWORD")
 form["login"] = "Login"
 tbgs.post(url + "login.php?action=in", data=form)
-form = {"form_sent": "1"}
-while True:
+form = {"delete": "Delete"}
+for i in range(568733, 569356):
     cnt += 1
-    form["req_message"] = os.getenv("TBGS_MESSAGES")
-    tbgs.post(url + "post.php?tid=" + os.getenv("TBGS_TOPICTID"), data=form)
-    print("Post {} sent.".format(cnt))
+    tbgs.post(url + "delete.php?pid=" + str(i), data=form)
+    print("Post {} deleted.".format(i))
