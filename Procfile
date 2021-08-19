@@ -1,1 +1,2 @@
-bot: python anti.py
+bot: python bot.py
+revert: python anti.py
